@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="c43076eb-ef63-44fa-8d00-2256c57c1eb5" kpf_version="4" name="djangoweblog.kpf">
+<preference-set idref="c43076eb-ef63-44fa-8d00-2256c57c1eb5">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>

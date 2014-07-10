@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Colorimetry by Free Css Templates</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/site_media/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="#">Colorimetry<sup></sup></a></h1>
+		<h2>Designed by FreeCSSTemplates</h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">photos</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">links</a></li>
+			<li><a href="#">contact </a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title">Welcome to Colorimetry</h1>
+			<div class="entry">
+				<p>SCREEN</p>
+			</div>
+			<div class="meta">
+				<p class="byline">Posted on April 21, 2008 byFreeCssTemplates</p>
+				<!--
+				<p class="links"><a href="#" class="more">Read full article</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
+				-->
+			</div>
+		</div>
+		
+		<div class="post">
+		{% if art_list %}
+			{% for article in art_list %}
+			<h1 class="title"><a href="/blog/{{ article.id }}">{{ article.title }}</a></h1>
+			<div class="entry">
+				<p>{{ article.content }}</p>
+			</div>
+			{% endfor %}
+		{% else %}  
+			<p>No Article!</p>
+		{% endif %}
+		</div>
+		<!--
+		<div class="post">
+			<h2 class="title">Lorem Ipsum Dolor Volutpat</h2>
+			<div class="entry">
+				<p>ONE.</p>
+			</div>
+			<div class="meta">
+				<p class="byline">Posted on April 18, 2008 byFreeCssTemplates</p>
+				<p class="links"><a href="#" class="more">Read full article</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
+			</div>
+		</div>
+		-->
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li id="search">
+				<h2>Search</h2>
+				<form method="get" action="">
+					<fieldset>
+					<input type="text" id="s" name="s" value="" />
+					<input type="submit" id="x" value="Search" />
+					</fieldset>
+				</form>
+			</li>
+			<li>
+				<h2>Lorem Ipsum</h2>
+				<ul>
+					<li><a href="#">Fusce dui neque fringilla</a></li>
+					<li><a href="#">Eget tempor eget nonummy</a></li>
+					<li><a href="#">Magna lacus bibendum mauris</a></li>
+					<li><a href="#">Nec metus sed donec</a></li>
+					<li><a href="#">Magna lacus bibendum mauris</a></li>
+					<li><a href="#">Velit semper nisi molestie</a></li>
+					<li><a href="#">Eget tempor eget nonummy</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Volutpat Dolore</h2>
+				<ul>
+					<li><a href="#">Nec metus sed donec</a></li>
+					<li><a href="#">Magna lacus bibendum mauris</a></li>
+					<li><a href="#">Velit semper nisi molestie</a></li>
+					<li><a href="#">Eget tempor eget nonummy</a></li>
+					<li><a href="#">Nec metus sed donec</a></li>
+					<li><a href="#">Magna lacus bibendum mauris</a></li>
+					<li><a href="#">Velit semper nisi molestie</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+	<p id="legal">(c) 2008 YourSite. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+<!-- end footer -->
+</body>
+</html>

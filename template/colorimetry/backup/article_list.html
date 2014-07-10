@@ -1,0 +1,9 @@
+{% if art_list %}
+{% for article in art_list %}
+		<div class="article">
+			<div class="title"><a href="/blog/{{ article.id }}">{{ article.title }}</a></div>
+		</div>
+{% endfor %}
+{% else %} 
+	<p>No Article!</p>
+{% endif %}

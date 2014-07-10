@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Chengying Blog</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/site_media/colorimetry/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="/blog/">Chengying Blog<sup></sup></a></h1>
+		<h2>Another blog</h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="active"><a href="/blog/">Home</a></li>
+			<li><a href="/blog/">Blog</a></li>
+			<li><a href="/microblog/1">MBlog</a></li>
+			<li><a href="#">Photos</a></li>
+			<li><a href="#">contact </a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title">{{ art.title }}</h1>
+			<div class="entry">
+				<p>
+				{% autoescape off %}
+				{{ art.content }}
+				{% endautoescape %}
+				</p>
+			</div>
+			<div class="meta">
+				<p class="byline">Posted on {{ art.published_at}}</p>
+				 <p><a href="/admin/blog/article/{{ art.id }}">Modify</a></p>
+				 <p><a href="/blog">BACK</a></p>
+
+			</div>
+		</div>
+	<br>
+	Comment:<br>
+	{% for cmt in comm %}
+	<p>
+	<hr>
+	{{ cmt.text }}
+	{% endfor %}
+	<hr>
+	<form id="myform" class="cssform" action="/sendcomment/{{ art.id }}/" method="post">
+		<p>
+		Publish comment:<br>
+		<textarea cols="72" rows="2" name="txt_comment" class="text" id="q8"></textarea>
+		<div style="margin-left: 350px;magin-buttom: 10px;">
+			<input type="submit" value="send" />
+		</div>
+		</p>
+	</form>
+
+	</div>
+
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li id="search">
+				<h2>Search</h2>
+				<form method="get" action="">
+					<fieldset>
+					<input type="text" id="s" name="s" value="" />
+					<input type="submit" id="x" value="Search" />
+					</fieldset>
+				</form>
+			</li>
+			<li>
+				<h2>Category</h2>
+				<ul>
+					{% if category_list %}
+						{% for category in category_list %}
+						<li><a href="#">{{ category.name }}</a></li>
+						{% endfor %}
+					{% endif %}
+
+				</ul>
+			<li>
+				<h2>Recent Post</h2>
+				<ul>
+				{% if art_list %}
+					{% for article in art_list %}
+					<li><a href="/blog/{{ article.id }}">{{ article.title }}</a></li>
+					{% endfor %}
+				{% else %}  
+					<p>No Article!</p>
+				{% endif %}
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+	<p id="legal">(c) 2008 YourSite. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+<!-- end footer -->
+</body>
+</html>

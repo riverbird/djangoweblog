@@ -1,0 +1,8 @@
+<div class="article">
+	<div class="title">Title : {{ object.title }}</div>
+	<div class="pub_date">{{ object.published_at }}</div>
+	<div class="content">{{ object.content }}</div>
+	<div class="category">Publish : {{ object.category.name }}</div>
+</div>
+<p><a href="/admin/blog/article/{{ object.id }}">Modify</a></p>
+<p><a href="/test">BACK</a></p>

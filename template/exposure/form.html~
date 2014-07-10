@@ -1,0 +1,124 @@
+<script src="http://www.jotform.com/js/form.js?v2.0.772" type="text/javascript"></script>
+<style type="text/css">
+.tbmain{ 
+ /* Changes on the form */
+ background: url(http://www.jotform.com/images/styles/style1_bg.gif) #ffffff top repeat-x !important; 
+}
+.left{
+  /* Changes on the form */
+  color: #ff5200 !important; 
+  font-family: Trebuchet MS !important;
+  font-size: 11px !important;
+}
+td.left {
+   font-family: "Trebuchet MS";
+   font-size: 11px;
+   font-weight:bold;
+   color:#ff5200;
+   vertical-align: top;
+   text-align: left;
+}
+.pagebreak{
+   font-family: "Trebuchet MS";
+   font-size: 11px;
+   font-weight:bold;
+   color:black;
+}
+td.right {
+   font-family: "Trebuchet MS";
+   font-size: 11px;
+   font-weight:normal;
+   color:#333333;
+   vertical-align: top;   
+   text-align: left;   
+}
+.tbmain{
+   height:100%;
+   color:#333333;
+   background:url(http://www.jotform.com/images/styles/style1_bg.gif) #ffffff top repeat-x;
+}
+.head{
+   font-family: "Trebuchet MS";
+   font-size: large;
+   font-weight: bold;
+   color:#ff5200;
+   vertical-align: top;
+   text-align: left;
+}
+.notvalid{
+   border:2px red solid;
+   font-family:"Trebuchet MS";
+}
+.text{
+   font-family: "Trebuchet MS";
+   font-size: 11px;
+   font-weight:normal;
+   color:#333333;
+   border:1px #cccccc solid;
+   background:url(http://www.jotform.com/images/styles/style1_txt_bg.gif) #f6f6f6 top repeat-x;
+}
+select.other{
+   font-family: "Trebuchet MS";
+   font-size: 11px;
+   font-weight:normal;
+   color:#333333;
+   border:1px #cccccc solid;
+   background:url(http://www.jotform.com/images/styles/style1_txt_bg.gif) #f6f6f6 top repeat-x;
+}
+.btn{
+   font-family: "Trebuchet MS";
+   font-size: 11px;
+   font-weight:normal;
+   color:#333333;
+   border:1px #c6c7ca solid;
+   background: url(http://www.jotform.com/images/styles/style1_btn_bg.gif) #e4e4e4 top repeat-x;
+}
+span.required{
+  font-size: 13px !important;
+  color: red !important;
+}
+ 
+</style> 
+<table width="100%" cellpadding="2" cellspacing="0" class="tbmain">
+<tr><td class="topleft" width="10" height="10">&nbsp;</td>
+<td class="topmid">&nbsp;</td>
+<td class="topright" width="10" height="10">&nbsp;</td>
+  </tr>
+<tr>
+<td class="midleft" width="10">&nbsp;&nbsp;&nbsp;</td>
+<td class="midmid" valign="top">
+<form  action="http://www.jotform.com/submit.php"  method="post" name="q_form_82823903141">
+<input type="hidden" name="formID" value="82823903141" />
+<div id="main"> 
+<table width="520" cellpadding="5" cellspacing="0">
+ <tr >
+  <td width="150" class="left" valign="top"  >
+   <label>我在做什么?</label>
+  </td>
+  <td class="right" >
+   <textarea cols="50" rows="2" name="q8_" class="text" id="q8" ></textarea>
+  </td>
+ </tr>
+ <tr >
+  <td width="150" class="left" >&nbsp;
+ 
+  </td>
+  <td class="right">
+  <input type="submit" class="btn" value="发送" />
+ </td>
+ </tr>
+</table>
+</div>
+</form>
+</td>
+<td class="midright" width="10">&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+ <td class="bottomleft" width="10" height="10">&nbsp;</td>
+ <td class="bottommid">&nbsp;</td>
+ <td class="bottomright" width="10" height="10">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript">
+validate("q_form_82823903141");
+</script>

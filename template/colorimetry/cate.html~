@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Django Weblog</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/site_media/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="/blog/">DjangoWeblog<sup></sup></a></h1>
+		<h2>Another blog</h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="active"><a href="/blog/">Home</a></li>
+			<li><a href="#">photos</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">links</a></li>
+			<li><a href="#">contact </a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+		{% if art_list %}
+			{% for article in art_list %}
+			<h1 class="title"><a href="/article/{{ article.id }}">{{ article.title }}</a></h1>
+			<div class="entry">
+				<p>
+				{% autoescape off %}
+				{{ article.content }}
+				{% endautoescape %}
+				</p>
+			</div>
+			<div class="meta">
+				<p class="byline">Posted on {{ article.published_at}}</p>
+			</div>
+			{% endfor %}
+		{% else %}  
+			<p>No Article!</p>
+		{% endif %}
+		</div>
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li id="search">
+				<h2>Search</h2>
+				<form method="get" action="/search/">
+					<fieldset>
+					<input type="text" id="s" name="s" value="" />
+					<input type="submit" id="x" value="Search" />
+					</fieldset>
+				</form>
+			</li>
+			<li>
+				<h2>Category</h2>
+				<ul>
+					{% if category_list %}
+						{% for category in category_list %}
+						<li><a href="/cate/{{ category.id }}">{{ category.name }}</a></li>
+						{% endfor %}
+					{% endif %}
+
+				</ul>
+			<li>
+				<h2>Recent Post</h2>
+				<ul>
+				{% if art_list %}
+					{% for article in art_list %}
+					<li><a href="/article/{{ article.id }}">{{ article.title }}</a></li>
+					{% endfor %}
+				{% else %}  
+					<p>No Article!</p>
+				{% endif %}
+				</ul>
+			</li>
+			<li>
+				<h2>Feed</h2>
+				<a href = "/feeds/lastest"><img src = "/site_media/images/feed.png"></a>
+			</li>
+
+
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+	<p>{% for art in lst_page %}
+	<a href="/page/{{ art }}">{{ art }}</a>&nbsp;
+	{% endfor %}
+	</p>
+</div>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+	<p id="legal">(c) 2008 http://riverbird2005.cublog.cn. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.Powered by <a href="http://www.djangoproject.com/">Django</a></p>
+	<p>
+	<a href="http://www.djangoproject.com/"><img src='/site_media/images/djangopowered126x54.gif' alt="django" border="0" width="126" height="54"></a>
+	<a href="http://www.freecsstemplates.org/"><img src='/site_media/images/freecsslogo.gif' alt="freecsstemplates" border="0" width="126" height="54"></a>
+	</p>
+</div>
+<!-- end footer -->
+</body>
+</html>
